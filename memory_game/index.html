@@ -12,7 +12,7 @@
     </header>
     <nav>
         <a class="memory-game__anchor" href="#instructions">Instructions</a>
-        <a class="memory-game__anchor" href="#game">Game</a>
+        <a class="memory-game__anchor" href="#game-board">Game</a>
     </nav>
     <main>
         <h2 id="instructions">Instructions</h2>
@@ -20,19 +20,31 @@
             or simply Pairs, is a card game in which all of the cards are laid face down on a surface and
             two cards are flipped face up over each turn. The object of the game is to turn over pairs of
             matching cards.</p>
-        <!--<h2>Description</h2>
-        <p> What's fun about it? Why should people play?</p>-->
-        <div id="game-board" class="board clearfix"></div>
+        <div class="score">
+            <div class="score__display">
+                <p>Score</p>
+            </div>
+            <div class="score__match">
+                <p>Match <span>0</span></p>
+            </div>
+            <div class="score__mismatch">
+                <p>Mismatch <span>0</span></p>
+            </div>
+        </div>
+        <div id="game-board" class="board clearfix">
+            <div class="modal">
+                <div>
+                    <p></p>
+                    <button>Try Again!</button>
+                </div>
+            </div>
+        </div>
+        <button class="reset">Reset</button>
     </main>
     <footer class="clearfix">
         <p class="copyright">Copyright 2017</p>
         <p class="message">Created with &hearts; by <span class="name">GA</span></p>
     </footer>
-    <!--
-    <a href="#">Twitter</a>
-    <a href="#">Facebook</a>
-    <a href="#">Google</a>
-    <a href="#">Instagram</a>-->
     <script src="js/main.js"></script>
 </body>
 </html>

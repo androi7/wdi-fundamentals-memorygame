@@ -56,6 +56,7 @@ p {
 
 img {
     margin: 40px 8px 0 8px;
+    cursor: pointer;
 }
 
 a {
@@ -106,4 +107,160 @@ footer {
 .name {
     color: #F15B31;
     font-weight: 700;
+}
+
+.score {
+    display: grid;
+    grid-template-columns: 80px 160px;
+    grid-template-rows: 40px 40px;
+    grid-gap: 4px 30px;
+    padding: 8px;
+    margin: 80px auto 0 auto;
+    width: 340px;
+    justify-content: center;
+    background: #0d2c40;
+    border-radius: 44px;
+    color: white;
+    font-family: sans-serif;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.85);
+}
+
+.score__display {
+    grid-area: 1 / 1 / span 2 / span 1;
+    background: #0d2c40;
+}
+
+.score__display p {
+    margin: 0;
+    padding: 0 4px;
+    font-size: 24px;
+    line-height: 84px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+.score__match {
+    grid-area: 1 / 2 / span 1 / span 1;
+    background: #00a6b3;
+    border-radius: 4px;
+}
+
+.score__match p,
+.score__mismatch p {
+    margin: 0;
+    padding: 0 10px;
+    line-height: 40px;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+.score__match span {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    vertical-align: bottom;
+}
+
+.score__mismatch span {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    vertical-align: bottom;
+}
+
+.score__mismatch {
+    grid-area: 2 / 2 / span 1 / span 1;
+    background: #f15b31;
+    border-radius: 4px;
+}
+
+.board {
+    position: relative;
+}
+
+.modal {
+    position: absolute;
+    visibility: hidden;
+    top: 20px;
+    left: 2.5%;
+    background: rgba(0,0,0,0.2);
+    height: 100%;
+    width: 95%;
+    border-radius: 8px;
+}
+
+.modal div {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.matched p::after {
+    content: 'Match';
+    text-transform: uppercase;
+    background: #00a6b3;
+    padding: 10px;
+    font-size: 24px;
+    font-family: sans-serif;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #0d2c40;
+}
+
+.mismatched p::after {
+    content: 'Mismatch';
+    text-transform: uppercase;
+    background: #f15b31;
+    padding: 10px;
+    font-size: 24px;
+    font-family: sans-serif;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #0d2c40;
+}
+
+.modal p {
+    margin: 0 0 30px 0;
+}
+
+.modal button {
+    font-size: 36px;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 10px;
+    background: #0D2C40;
+    color: white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    /*transition: all 0.2s ease-out;*/
+}
+
+.modal button:hover,
+.modal button:focus,
+.modal button:active {
+    box-shadow: 0 0 0 3px #10526f;
+    color: #efefef;
+    background: #000000;
+}
+
+.reset {
+    background: #0D2C40;
+    color: white;
+    font-size: 24px;
+    margin: 40px auto 20px auto;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.85);
+    cursor: pointer;
+}
+
+.reset:active,
+.reset:focus,
+.reset:hover {
+    outline: none;
+    box-shadow: 0 0 0 3px #10526f;
 }
